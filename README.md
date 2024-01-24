@@ -1,68 +1,46 @@
-# Seeds: A Web App for Custom Hash Generation
+# Astro + NextUI Template
 
-![Seeds](https://github.com/rrios-dev/seed-generator/blob/main/seeds.png?raw=true)
-
-[URL](https://seeds.rrios.dev/)
-
-## Overview
-
-Seeds is an advanced hash generation web application developed with the robust Astro framework using TypeScript. This state-of-the-art tool offers custom hash generation based on a seed phrase with a plethora of customizable parameters including token length, the number of hash groups (modules), and the number of hashes per module. Designed for efficiency and ease of use, Seeds caters to a variety of use cases from security to software development.
-
-## Features
-
-- **Custom Hash Generation**: Create hashes that meet your specific requirements.
-- **Adjustable Token Length**: Tailor the length of your tokens for your security needs.
-- **Modular Hash Groups**: Organize your hashes in a structured manner with the ability to specify the number of modules.
-- **Variable Hashes Per Module**: Decide on the number of hashes generated within each module.
-- **Sleek User Interface**: A modern, intuitive UI that simplifies the complexity of hash generation.
+This is a template repository for creating web applications using Astro and NextUI. It includes a basic project structure and dependencies to help you get started quickly.
 
 ## Getting Started
 
-Clone the repository to your local machine:
+To get started with this template, follow these steps:
 
+1. Clone this repository to your local machine.
+2. Install the required dependencies using npm or yarn.
+   ```bash
+   bun install
+   ```
+### Start development server
 ```bash
-git clone https://github.com/rrios-dev/seed-generator
+bun dev
 ```
 
-Navigate to the project directory:
+## Available Scripts
+In the project directory, you can run the following scripts:
 
-```bash
-cd seeds
-```
-npm install
+- `bun dev` Start the development server.
+- `bun start` Alias for bun dev.
+- `bun run build` Build the project for production.
+- `bun preview` Preview the built project.
+- `bun astro` Run Astro commands directly.
+- `bun run test` Run tests using Vitest.
 
-```bash
-npm install
-```
-To start the development server:
-```bash
-npm run dev
-```
-For building the project for production:
-```bash
-npm run build
-```
-To preview the production build:
+## Testing and Linting
 
-```bash
-npm run preview
-```
-## Usage
-1. Enter your seed phrase.
-2. Adjust the token length, module count, and hashes per module to your preference.
-3. Generate hashes with a single click.
-4. Easily copy and manage your generated hashes.
+To run tests and linting, you can use the following commands:
 
-## Scripts
-- `npm run dev` - Start the development server with hot reload.
-- `npm run start` - Alias to npm run dev.
-- `npm run build` - Check and build the project for production.
-- `npm run preview` - Preview the production build.
-- `npm run astro` - Directly interact with the Astro CLI.
-- `npm run test` - Run tests using Vitest.
+- `bun run test`: This command will execute your tests using Vitest.
+- `bun run lint`: You can add linting rules and configurations as needed and run linting using ESLint.
 
-## Contributing
-Contributions to HashGen are welcome! Please read our contributing guidelines before submitting pull requests.
+## Dependencies
+This template includes the following major dependencies:
+
+- Astro: A modern static site generator.
+- NextUI: A UI framework for building web applications.
+- Other related dependencies for development and utility.
+
+Please make sure to check the package.json file for more details on specific versions of dependencies.
 
 ## License
-HashGen is open-source software licensed under the MIT license.
+This template is open-source and available under the MIT License.
