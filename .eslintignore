@@ -1,0 +1,10 @@
+node_modules
+dist
+.eslintrc.cjs
+tsconfig.json
+coverage
+.vscode
+.git
+public
+astro.config.mjs
+tailwind.config.js

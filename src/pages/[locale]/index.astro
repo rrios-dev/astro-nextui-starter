@@ -1,0 +1,23 @@
+---
+import MainLayout from '@/layouts/main-layout.astro';
+import { Locale } from '@/pods/i18n/interfaces';
+import useTranslation from '@/pods/i18n/use-translation';
+import { getLangFromUrl } from '@/pods/i18n/utils';
+
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslation(locale);
+
+export async function getStaticPaths() {
+  return Object.values(Locale).map((locale) => ({
+    params: {
+      locale,
+    },
+  }));
+}
+---
+
+<MainLayout>
+  <main class='flex flex-col gap-8 max-w-6xl mx-4 6xl:mx-auto h-fit'>
+    {t('test.hello')}
+  </main>
+</MainLayout>

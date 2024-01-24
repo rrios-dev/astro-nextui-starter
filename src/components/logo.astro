@@ -1,0 +1,55 @@
+<div
+  class="relative w-full h-96 flex items-center justify-center rounded-md"
+>
+  <div class="triangle-part part1"></div>
+  <div class="triangle-part part2"></div>
+  <div class="triangle-part part3"></div>
+</div>
+
+<style>
+  .triangle-part {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .part1 {
+    border-width: 150px 86.6px 0;
+    border-color: red transparent transparent;
+    transform: rotate(60deg);
+    animation: shadowNoise 8s infinite;
+    box-shadow: 0 0 15px blue;
+  }
+
+  .part2 {
+    border-width: 150px 86.6px 0;
+    border-color: blue transparent transparent;
+    transform: rotate(180deg);
+    animation: shadowNoise 8s infinite;
+    animation-delay: 2s;
+    box-shadow: 0 0 15px red;
+  }
+
+  .part3 {
+    border-width: 150px 86.6px 0;
+    border-color: red transparent transparent;
+    transform: rotate(300deg);
+    animation: shadowNoise 8s infinite;
+    box-shadow: 0 0 15px blue;
+    animation-delay: 4s;
+  }
+
+  @keyframes shadowNoise {
+    0% {
+      box-shadow: 0 0 15px blue;
+    }
+    50% {
+      box-shadow: 0 0 15px red;
+    }
+    100% {
+      box-shadow: 0 0 15px blue;
+    }
+  }
+
+</style>

@@ -1,0 +1,16 @@
+<script is:inline>
+  const theme = (() => {
+    switch (true) {
+      case typeof localStorage !== 'undefined' && localStorage.getItem('theme'):
+        return localStorage.getItem('theme');
+      case window.matchMedia('(prefers-color-scheme: dark)').matches:
+        return 'dark';
+      default:
+        return 'light';
+    }
+  })();
+  theme === 'light'
+    ? document.documentElement.classList.remove('dark')
+    : document.documentElement.classList.add('dark');
+  window.localStorage.setItem('theme', theme);
+</script>
