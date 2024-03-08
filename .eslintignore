@@ -1,0 +1,13 @@
+node_modules
+dist
+.eslintrc.cjs
+tsconfig.json
+coverage
+.vscode
+.git
+public
+astro.config.mjs
+tailwind.config.js
+commitlint.config.js
+codegen.ts
+astro-i18next.config.mjs

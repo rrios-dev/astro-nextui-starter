@@ -1,0 +1,11 @@
+{
+    "titleApp": "Plantilla Astro",
+    "footer": {
+        "contact": "Contacto"
+    },
+    "validations": {
+        "required": "Campo obligatorio",
+        "url": "URL no válida",
+        "email": "Correo electrónico no válido"
+    }
+}

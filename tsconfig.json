@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": false,
+    "baseUrl": ".",
+    "jsxImportSource": "react",
+    "types": ["astro/client"],
+    "paths": {
+      "@/*": ["./src/*"],
+    },
+  },
+  "include": ["./src/**/*", "astro.config.js"],
+}

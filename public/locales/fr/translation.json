@@ -1,0 +1,11 @@
+{
+    "titleApp": "Modèle Astro",
+    "footer": {
+        "contact": "Contact"
+    },
+    "validations": {
+        "required": "Champ obligatoire",
+        "url": "URL invalide",
+        "email": "E-mail invalide"
+    }
+}

@@ -1,0 +1,71 @@
+---
+import AnalyticsHead from '@/components/analytics-head.astro';
+import Footer from '@/components/footer.astro';
+import ScriptTheme from '@/components/script-theme.astro';
+import { HeadHrefLangs } from 'astro-i18next/components';
+import { ViewTransitions } from 'astro:transitions';
+import i18next, { t } from 'i18next';
+---
+
+<html lang={i18next.language}>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+      rel='stylesheet'
+    />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='generator' content={Astro.generator} />
+    <meta http-equiv='Content-Language' content={i18next.language} />
+    <meta name='author' content='Roberto Ríos <roberto@rrios.dev>' />
+    <meta name='keywords' content='' />
+    <meta name='description' content='' />
+    <title>{t('titleApp')}</title>
+    <ViewTransitions />
+    <HeadHrefLangs />
+    <AnalyticsHead />
+    <ScriptTheme />
+  </head>
+
+  <body
+    class='h-full flex flex-col justify-between bg-background text-foreground'
+  >
+    <main class='flex flex-col gap-4 h-full items-center'>
+      <slot />
+    </main>
+    <Footer />
+    <style is:global>
+      ::selection {
+        background-color: hsl(var(--nextui-primary));
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: hsl(var(--nextui-background));
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: hsl(var(--nextui-foreground));
+      }
+
+      body {
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      button,
+      a {
+        &:not(:disabled):focus-visible {
+          outline: 2px solid hsl(var(--nextui-primary));
+          outline-offset: 2px;
+        }
+      }
+    </style>
+  </body>
+</html>

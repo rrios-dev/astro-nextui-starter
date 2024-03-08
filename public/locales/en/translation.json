@@ -1,0 +1,11 @@
+{
+    "titleApp": "Astro template",
+    "footer": {
+        "contact": "Contact"
+    },
+    "validations": {
+        "required": "Mandatory field",
+        "url": "Invalid URL",
+        "email": "Invalid email"
+    }
+}
